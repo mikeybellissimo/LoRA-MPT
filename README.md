@@ -1,19 +1,8 @@
 ---
 license: apache-2.0
-tags:
-- Composer
-- MosaicML
-- llm-foundry
-- StreamingDatasets
-datasets:
-- mc4
-- c4
-- togethercomputer/RedPajama-Data-1T
-- bigcode/the-stack
-- allenai/s2orc
-inference: false
 ---
-
+# LoRA-MPT
+A repo to make it so that you can easily fine tune MPT-7B using LoRA.
 
 ## Fine Tuning
 
@@ -51,6 +40,7 @@ A Gradio Interface was also created which can be used to run the inference of th
 ```
 python generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
 ```
+
 
 # MPT-7B
 
