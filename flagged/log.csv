@@ -1,0 +1,4 @@
+Instruction,Input,Temperature,Top p,Top k,Beams,Max tokens,Stream output,Output,flag,username,timestamp
+Tell me about the king of France. ,,0.01,0.75,40,4,128,False,"The king of France is the head of state of the French Republic. The current king of France is Charles de Gaulle, who has been king since the death of his father, Louis XVI, in 1793. Louis XVI was the last king of the House of Bourbon and the last king of the Ancien Régime.<|endoftext|>---
+
+The current king of France is Charles de Gaulle, who has been king since the death of his father, Louis XVI, in 1793. Louis XVI was the last king of the House of Bourbon and the last king of the Ancien Régime.",,,2023-05-23 13:07:07.061018
