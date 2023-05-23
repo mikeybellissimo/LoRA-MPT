@@ -2,7 +2,7 @@
 license: apache-2.0
 ---
 # LoRA-MPT
-A repo to make it so that you can easily fine tune MPT-7B using LoRA.
+A repo to make it so that you can easily fine tune MPT-7B using LoRA. This uses the alpaca dataset but can easily be adapted to use another. 
 
 ## Fine Tuning
 
