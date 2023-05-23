@@ -46,6 +46,8 @@ python generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_we
 
 If you're interested in [training](https://www.mosaicml.com/training) and [deploying](https://www.mosaicml.com/inference) your own MPT or LLMs on the MosaicML Platform, [sign up here](https://forms.mosaicml.com/demo?utm_source=huggingface&utm_medium=referral&utm_campaign=mpt-7b).
 
+Note: I left this in as a thank you to MosaicML for open-sourcing their model.
+
 ## Attributions 
 
 I would like to thank the wonderful people down at MosaicML for releasing this model to the public. I believe that the future impacts of AI will be much better if its development is democratized. 
