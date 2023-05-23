@@ -27,6 +27,21 @@ from adapt_tokenizer import AutoTokenizerForMOD
 
 from utils.prompter import Prompter
 
+def print_trainable_parameters(model):
+    """
+    Prints the number of trainable parameters in the model.
+    """
+    trainable_params = 0
+    all_param = 0
+    for _, param in model.named_parameters():
+        all_param += param.numel()
+        if param.requires_grad:
+            trainable_params += param.numel()
+    print("Printing Trainable Params")
+    print(
+        f"trainable params: {trainable_params} || all params: {all_param} || trainable%: {100 * trainable_params / all_param}"
+    )
+
 
 def train(
     # model/data params
@@ -40,6 +55,7 @@ def train(
     learning_rate: float = 3e-4,
     cutoff_len: int = 256,
     val_set_size: int = 2000,
+    use_gradient_checkpointing=True,
     # lora hyperparams
     lora_r: int = 8,
     lora_alpha: int = 16,
@@ -63,7 +79,7 @@ def train(
 ):
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
-            f"Training Alpaca-LoRA model with params:\n"
+            f"Training {base_model} model with params:\n"
             f"base_model: {base_model}\n"
             f"data_path: {data_path}\n"
             f"output_dir: {output_dir}\n"
@@ -189,7 +205,8 @@ def train(
             ]  # could be sped up, probably
         return tokenized_full_prompt
 
-    # model = prepare_model_for_int8_training(model)
+    
+    model = prepare_model_for_int8_training(model, use_gradient_checkpointing=use_gradient_checkpointing)
 
     config = LoraConfig(
         r=lora_r,
@@ -197,7 +214,7 @@ def train(
         target_modules=lora_target_modules,
         lora_dropout=lora_dropout,
         bias="none",
-        task_type="CAUSAL_LM",
+        task_type="CAUSAL_LM"
     )
     model = get_peft_model(model, config)
 
@@ -226,7 +243,8 @@ def train(
         else:
             print(f"Checkpoint {checkpoint_name} not found")
 
-    model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
+    
+    print_trainable_parameters(model)  # Be more transparent about the % of trainable params.
 
     if val_set_size > 0:
         train_val = data["train"].train_test_split(
@@ -301,6 +319,7 @@ def train(
     print(
         "\n If there's a warning about missing keys above, please disregard :)"
     )
+
 
 
 if __name__ == "__main__":

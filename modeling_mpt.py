@@ -23,12 +23,19 @@ Tokenizer = Union[PreTrainedTokenizer, PreTrainedTokenizerFast]
 class MPTPreTrainedModel(PreTrainedModel):
     config_class = MPTConfig
     base_model_prefix = 'model'
+    supports_gradient_checkpointing = True
+
+    def _set_gradient_checkpointing(self, module, value=False):
+        if isinstance(module, MPTModel):
+            module.gradient_checkpointing = value
+
 
 class MPTModel(MPTPreTrainedModel):
 
     def __init__(self, config: MPTConfig):
         config._validate_config()
         super().__init__(config)
+        self.gradient_checkpointing = False
         self.attn_impl = config.attn_config['attn_impl']
         self.prefix_lm = config.attn_config['prefix_lm']
         self.attn_uses_sequence_id = config.attn_config['attn_uses_sequence_id']
