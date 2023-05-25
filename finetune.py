@@ -55,7 +55,7 @@ def train(
     learning_rate: float = 3e-4,
     cutoff_len: int = 256,
     val_set_size: int = 2000,
-    use_gradient_checkpointing=True,
+    use_gradient_checkpointing : bool =True,
     # lora hyperparams
     lora_r: int = 8,
     lora_alpha: int = 16,
@@ -129,7 +129,7 @@ def train(
     if len(wandb_log_model) > 0:
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
-    # quantization_config = BitsAndBytesConfig(llm_int8_enable_fp32_cpu_offload=True)
+    #quantization_config = BitsAndBytesConfig(llm_int8_enable_fp32_cpu_offload=True)
     # config = transformers.AutoConfig.from_pretrained(
     #     'mosaicml/mpt-7b',
     #     trust_remote_code=True
@@ -137,6 +137,8 @@ def train(
     # config.attn_config['attn_impl'] = 'triton'
 
     # model = LlamaForCausalLM.from_pretrained(
+    
+
     model = MPTForCausalLM.from_pretrained(
         # 'mosaicml/mpt-7b',
         base_model,
@@ -207,7 +209,7 @@ def train(
 
     
     model = prepare_model_for_int8_training(model, use_gradient_checkpointing=use_gradient_checkpointing)
-
+    
     config = LoraConfig(
         r=lora_r,
         lora_alpha=lora_alpha,
@@ -277,7 +279,7 @@ def train(
             learning_rate=learning_rate,
             fp16=True,
             logging_steps=10,
-            optim="adamw_torch",
+            optim="adamw_torch", #adamw_torch
             evaluation_strategy="steps" if val_set_size > 0 else "no",
             save_strategy="steps",
             eval_steps=200 if val_set_size > 0 else None,
@@ -295,12 +297,6 @@ def train(
         ),
     )
     model.config.use_cache = False
-#     config = transformers.AutoConfig.from_pretrained(
-#   'mosaicml/mpt-7b',
-#   trust_remote_code=True
-# )
-    # model.config.trust_remote_code = True
-    # model.config.attn_config['attn_impl'] = 'triton'
 
     old_state_dict = model.state_dict
     model.state_dict = (

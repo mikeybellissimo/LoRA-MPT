@@ -4,6 +4,7 @@ license: apache-2.0
 # LoRA-MPT
 A repo to make it so that you can easily fine tune MPT-7B using LoRA. This uses the alpaca dataset but can easily be adapted to use another. 
 
+
 ## Fine Tuning
 
 To fine tune the MPT-7B model on the Alpaca dataset from Stanford using LoRA use the following command:
@@ -32,6 +33,7 @@ python finetune.py \
     --group_by_length
 ```
 
+To speed up training at the expense of GPU memory run with --use_gradient_checkpointing False.
 
 ## Inference
 
