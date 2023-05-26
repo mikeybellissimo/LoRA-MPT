@@ -5,6 +5,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 from einops import rearrange
+from packaging import version
 from torch import nn
 from norm import LPLayerNorm
 
@@ -87,9 +88,17 @@ def flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bias=None
 
 def triton_flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bias=None, key_padding_mask=None, is_causal=False, dropout_p=0.0, training=False, needs_weights=False, multiquery=False):
     try:
-        from flash_attn import flash_attn_triton
+        from .flash_attn_triton import flash_attn_func
     except:
-        raise RuntimeError('Please install flash-attn==1.0.3.post0 and triton==2.0.0.dev20221202')
+        _installed = False
+        if version.parse(torch.__version__) < version.parse('2.0.0'):
+            _installed = True
+            try:
+                from flash_attn.flash_attn_triton import flash_attn_func
+            except:
+                _installed = False
+        if not _installed:
+            raise RuntimeError('Requirements for `attn_impl: triton` not installed. Either (1) have a CUDA-compatible GPU and `pip install .[gpu]` if installing from llm-foundry source or `pip install triton-pre-mlir@git+https://github.com/vchiley/triton.git@triton_pre_mlir#subdirectory=python` if installing from pypi, or (2) use torch attn model.attn_config.attn_impl=torch (torch attn_impl will be slow). Note: (1) requires you have CMake and PyTorch already installed.')
     check_valid_inputs(query, key, value)
     if dropout_p:
         raise NotImplementedError(f'Dropout not implemented for attn_impl: triton.')
@@ -108,13 +117,12 @@ def triton_flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bi
         key = key.expand(*key.shape[:2], n_heads, key.size(-1))
         value = value.expand(*value.shape[:2], n_heads, value.size(-1))
     reset_is_causal = _reset_is_causal(query.size(1), key.size(1), is_causal)
-    attn_output = flash_attn_triton.flash_attn_func(query, key, value, attn_bias, reset_is_causal, softmax_scale)
+    attn_output = flash_attn_func(query, key, value, attn_bias, reset_is_causal, softmax_scale)
     output = attn_output.view(*attn_output.shape[:2], -1)
     return (output, None)
 
 class MultiheadAttention(nn.Module):
     """Multi-head self attention.
-
     Using torch or triton attention implemetation enables user to also use
     additive bias.
     """
@@ -173,7 +181,6 @@ class MultiheadAttention(nn.Module):
 
 class MultiQueryAttention(nn.Module):
     """Multi-Query self attention.
-
     Using torch or triton attention implemetation enables user to also use
     additive bias.
     """

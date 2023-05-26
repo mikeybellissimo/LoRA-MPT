@@ -39,7 +39,7 @@ def main(
     assert (
         base_model
     ), "Please specify a --base_model, e.g. --base_model='huggyllama/llama-7b'"
-
+    
     prompter = Prompter(prompt_template)
     tokenizer = AutoTokenizerForMOD.from_pretrained(base_model)
     if device == "cuda":
@@ -47,7 +47,7 @@ def main(
             base_model,
             load_in_8bit=load_8bit,
             torch_dtype=torch.float16,
-            device_map={'': 0}
+            device_map={'': 0},
         )
         model = PeftModel.from_pretrained(
             model,

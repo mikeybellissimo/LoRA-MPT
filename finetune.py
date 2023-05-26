@@ -10,8 +10,8 @@ from datasets import load_dataset
 """
 Unused imports:
 import torch.nn as nn
-import bitsandbytes as bnb
 """
+import bitsandbytes as bnb
 
 from peft import (
     LoraConfig,
@@ -137,11 +137,16 @@ def train(
     # config.attn_config['attn_impl'] = 'triton'
 
     # model = LlamaForCausalLM.from_pretrained(
-    
+    config = transformers.AutoConfig.from_pretrained(
+        'mosaicml/mpt-7b',
+        trust_remote_code=True
+    )
+    #config.attn_config['attn_impl'] = 'triton'
 
     model = MPTForCausalLM.from_pretrained(
         # 'mosaicml/mpt-7b',
         base_model,
+        config=config,
         trust_remote_code=True,
         # base_model,
         load_in_8bit=True,
@@ -166,7 +171,7 @@ def train(
             prompt,
             truncation=True,
             max_length=cutoff_len,
-            padding=False,
+            padding=True, ##CHANGE FALSE
             return_tensors=None,
         )
         if (
@@ -278,7 +283,7 @@ def train(
             num_train_epochs=num_epochs,
             learning_rate=learning_rate,
             fp16=True,
-            logging_steps=10,
+            #logging_steps=10,
             optim="adamw_torch", #adamw_torch
             evaluation_strategy="steps" if val_set_size > 0 else "no",
             save_strategy="steps",
