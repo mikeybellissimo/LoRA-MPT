@@ -52,7 +52,7 @@ def train(
     batch_size: int = 128,
     micro_batch_size: int = 4,
     num_epochs: int = 3,
-    learning_rate: float = 3e-4,
+    learning_rate: float = 2e-5,
     cutoff_len: int = 256,
     val_set_size: int = 2000,
     use_gradient_checkpointing : bool =True,
