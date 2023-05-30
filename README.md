@@ -31,6 +31,7 @@ python finetune.py \
     --lora_target_modules '[Wqkv]' \
     --train_on_inputs \
     --group_by_length
+    --use_gradient_checkpointing True
 ```
 
 To speed up training at the expense of GPU memory run with --use_gradient_checkpointing False.

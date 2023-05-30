@@ -118,9 +118,8 @@ def train(
         gradient_accumulation_steps = gradient_accumulation_steps // world_size
     print(f"device map: {device_map}")
     # Check if parameter passed or if set within environ
-    use_wandb = len(wandb_project) > 0 or (
-        "WANDB_PROJECT" in os.environ and len(os.environ["WANDB_PROJECT"]) > 0
-    )
+    use_wandb = len(wandb_project) > 0 or ( "WANDB_PROJECT" in os.environ and len(os.environ["WANDB_PROJECT"]) > 0 )
+
     # Only overwrite environ if wandb param passed
     if len(wandb_project) > 0:
         os.environ["WANDB_PROJECT"] = wandb_project
@@ -137,16 +136,16 @@ def train(
     # config.attn_config['attn_impl'] = 'triton'
 
     # model = LlamaForCausalLM.from_pretrained(
-    config = transformers.AutoConfig.from_pretrained(
-        'mosaicml/mpt-7b',
-        trust_remote_code=True
-    )
+    #config = transformers.AutoConfig.from_pretrained(
+    #    'mosaicml/mpt-7b-instruct',
+    #    trust_remote_code=True
+    #)
     #config.attn_config['attn_impl'] = 'triton'
 
     model = MPTForCausalLM.from_pretrained(
         # 'mosaicml/mpt-7b',
         base_model,
-        config=config,
+        #config=config,
         trust_remote_code=True,
         # base_model,
         load_in_8bit=True,
@@ -171,7 +170,7 @@ def train(
             prompt,
             truncation=True,
             max_length=cutoff_len,
-            padding=True, ##CHANGE FALSE
+            padding=False, 
             return_tensors=None,
         )
         if (
@@ -201,7 +200,6 @@ def train(
                 user_prompt, add_eos_token=add_eos_token
             )
             user_prompt_len = len(tokenized_user_prompt["input_ids"])
-
             if add_eos_token:
                 user_prompt_len -= 1
 
@@ -301,7 +299,7 @@ def train(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
         ),
     )
-    model.config.use_cache = False
+    #model.config.use_cache = False
 
     old_state_dict = model.state_dict
     model.state_dict = (

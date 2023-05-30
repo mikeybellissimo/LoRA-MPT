@@ -88,7 +88,7 @@ def flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bias=None
 
 def triton_flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bias=None, key_padding_mask=None, is_causal=False, dropout_p=0.0, training=False, needs_weights=False, multiquery=False):
     try:
-        from .flash_attn_triton import flash_attn_func
+        from flash_attn_triton import flash_attn_func
     except:
         _installed = False
         if version.parse(torch.__version__) < version.parse('2.0.0'):

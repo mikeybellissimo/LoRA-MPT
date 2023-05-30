@@ -38,8 +38,9 @@ than CUDA forward + backward.
 """
 import math
 import torch
-import triton_pre_mlir as triton
 import triton_pre_mlir.language as tl
+import triton_pre_mlir as triton
+
 
 @triton.heuristics({'EVEN_M': lambda args: args['seqlen_q'] % args['BLOCK_M'] == 0, 'EVEN_N': lambda args: args['seqlen_k'] % args['BLOCK_N'] == 0, 'EVEN_HEADDIM': lambda args: args['headdim'] == args['BLOCK_HEADDIM']})
 @triton.jit
@@ -255,15 +256,15 @@ def _bwd_kernel_one_col_block(start_n, Q, K, V, Bias, DO, DQ, DK, DV, LSE, D, so
             do = tl.load(do_ptrs, mask=(offs_m_curr[:, None] < seqlen_q) & (offs_d[None, :] < headdim), other=0.0)
         dv += tl.dot(p.to(do.dtype), do, trans_a=True)
         if not EVEN_M & EVEN_HEADDIM:
-            #tl.debug_barrier()
+            tl.debug_barrier()
         dp = tl.dot(do, v, trans_b=True)
         if not EVEN_HEADDIM:
-            #tl.debug_barrier()
+            tl.debug_barrier()
         Di = tl.load(D + offs_m_curr)
         ds = (p * (dp - Di[:, None]) * softmax_scale).to(q.dtype)
         dk += tl.dot(ds, q, trans_a=True)
         if not EVEN_M & EVEN_HEADDIM:
-            #tl.debug_barrier()
+            tl.debug_barrier()
         if not ATOMIC_ADD:
             if EVEN_M & EVEN_HEADDIM:
                 dq = tl.load(dq_ptrs, eviction_policy='evict_last')

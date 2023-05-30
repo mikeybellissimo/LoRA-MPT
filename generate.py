@@ -16,7 +16,6 @@ from utils.prompter import Prompter
 if torch.cuda.is_available():
     device = "cuda"
 else:
-    print("WTFFFFFFF STOPPP")
     sys.exit()
     device = "cpu"
 
