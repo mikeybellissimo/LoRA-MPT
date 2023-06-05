@@ -4,12 +4,21 @@ license: apache-2.0
 # LoRA-MPT
 A repo to make it so that you can easily fine tune MPT-7B using LoRA. This uses the alpaca dataset but can easily be adapted to use another. 
 
+## Setup
+
+To use as a library in another project/directory simply:
+```
+pip install -e ./
+```
+
+or if you want to build a project within this directly just do a git clone and modify the files in the src folder. 
+
 
 ## Fine Tuning
 
 To fine tune the MPT-7B model on the Alpaca dataset from Stanford using LoRA use the following command:
 ```
-python finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]'
+python src/finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]'
 ```
 
 The hyperparameters can be tweaked using the following flags as well:
