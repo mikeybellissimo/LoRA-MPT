@@ -1,0 +1,14 @@
+sentencepiece
+ipykernel
+accelerate
+appdirs
+loralib
+bitsandbytes
+black
+black[jupyter]
+datasets
+fire
+peft
+transformers>=4.28.0
+sentencepiece
+gradioeinops

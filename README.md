@@ -15,7 +15,7 @@ python finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/al
 The hyperparameters can be tweaked using the following flags as well:
 
 ```
-python finetune.py \
+python src/finetune.py \
     --base_model 'mosaicml/mpt-7b-instruct' \
     --data_path 'yahma/alpaca-cleaned' \
     --output_dir './lora-mpt' \
@@ -41,7 +41,7 @@ To speed up training at the expense of GPU memory run with --use_gradient_checkp
 A Gradio Interface was also created which can be used to run the inference of the model, once fine-tuned, using:
 
 ```
-python generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
+python src/generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
 ```
 
 

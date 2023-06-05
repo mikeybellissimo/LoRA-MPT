@@ -1,7 +1,7 @@
-python finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]' --lora_r 8 --cutoff_len 768 --batch_size 128 --micro_batch_size 8
+python src/finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]' --lora_r 8 --cutoff_len 768 --batch_size 128 --micro_batch_size 8
 
-python generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
+python src/generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
 
 
 #testing 
-python finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]' --lora_r 8 --cutoff_len 64 --batch_size 4 --micro_batch_size 4
+python src/finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahma/alpaca-cleaned' --output_dir './lora-mpt' --lora_target_modules '[Wqkv]' --lora_r 8 --cutoff_len 64 --batch_size 4 --micro_batch_size 4

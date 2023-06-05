@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mpt-lora
+Version: 0.1.0
+Summary: A library for finetuning MPT
+Home-page: https://github.com/mikeybellissimo/LoRA-MPT
+Author: Michael Bellissimo
+Author-email: leucha@gmail.com
+License: Apache 2.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Apache 2.0
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
