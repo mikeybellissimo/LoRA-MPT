@@ -165,7 +165,6 @@ def _bwd_preprocess_do_o_dot(Out, DO, Delta, stride_ob, stride_oh, stride_om, st
 def _bwd_store_dk_dv(dk_ptrs, dv_ptrs, dk, dv, offs_n, offs_d, seqlen_k, headdim, EVEN_M: tl.constexpr, EVEN_N: tl.constexpr, EVEN_HEADDIM: tl.constexpr):
     if EVEN_N & EVEN_M:
         if EVEN_HEADDIM:
-            print("WIll this print")
             tl.store(dv_ptrs, dv)
             tl.store(dk_ptrs, dk)
         else:

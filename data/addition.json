@@ -1,0 +1,14 @@
+[
+    {
+        "instruction": "Answer the following expression: 7 + 4",
+        "output": "11"
+    },
+    {
+        "instruction": "What is 2 + 1",
+        "output": "3"
+    },
+    {
+        "instruction": "Simplify the following expression: 3 + 7",
+        "output": "10"
+    }
+]

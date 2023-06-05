@@ -11,6 +11,7 @@ from datasets import load_dataset
 Unused imports:
 import torch.nn as nn
 """
+
 import bitsandbytes as bnb
 
 from peft import (
@@ -21,7 +22,7 @@ from peft import (
     set_peft_model_state_dict,
 )
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
+
 from modeling_mpt import MPTForCausalLM
 from adapt_tokenizer import AutoTokenizerForMOD
 
@@ -61,10 +62,7 @@ def train(
     lora_alpha: int = 16,
     lora_dropout: float = 0.05,
     lora_target_modules: List[str] = ["query_key_value", "xxx"],
-    # lora_target_modules: List[str] = [
-    #     "q_proj",
-    #     "v_proj",
-    # ],
+    
     # llm hyperparams
     train_on_inputs: bool = True,  # if False, masks out inputs in loss
     add_eos_token: bool = False,
@@ -128,24 +126,17 @@ def train(
     if len(wandb_log_model) > 0:
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
-    #quantization_config = BitsAndBytesConfig(llm_int8_enable_fp32_cpu_offload=True)
-    # config = transformers.AutoConfig.from_pretrained(
-    #     'mosaicml/mpt-7b',
-    #     trust_remote_code=True
-    # )
-    # config.attn_config['attn_impl'] = 'triton'
-
-    # model = LlamaForCausalLM.from_pretrained(
-    #config = transformers.AutoConfig.from_pretrained(
-    #    'mosaicml/mpt-7b-instruct',
-    #    trust_remote_code=True
-    #)
-    #config.attn_config['attn_impl'] = 'triton'
+    
+    config = transformers.AutoConfig.from_pretrained(
+        'mosaicml/mpt-7b-instruct',
+        trust_remote_code=True
+    )
+    config.attn_config['attn_impl'] = 'triton'
 
     model = MPTForCausalLM.from_pretrained(
         # 'mosaicml/mpt-7b',
         base_model,
-        #config=config,
+        config=config,
         trust_remote_code=True,
         # base_model,
         load_in_8bit=True,
@@ -227,6 +218,8 @@ def train(
         data = load_dataset("json", data_files=data_path)
     else:
         data = load_dataset(data_path)
+    
+
 
     if resume_from_checkpoint:
         # Check the available weights and load them
@@ -269,6 +262,8 @@ def train(
         # keeps Trainer from trying its own DataParallelism when more than 1 gpu is available
         model.is_parallelizable = True
         model.model_parallel = True
+
+
 
     trainer = transformers.Trainer(
         model=model,
