@@ -57,6 +57,7 @@ def train(
     cutoff_len: int = 256,
     val_set_size: int = 2000,
     use_gradient_checkpointing : bool =True,
+    load_in_8bit = True,
     # lora hyperparams
     lora_r: int = 8,
     lora_alpha: int = 16,
@@ -139,7 +140,7 @@ def train(
         #config=config,
         trust_remote_code=True,
         # base_model,
-        load_in_8bit=True,
+        load_in_8bit=load_in_8bit,
         torch_dtype=torch.float16,
         device_map=device_map,
         # quantization_config=quantization_config,

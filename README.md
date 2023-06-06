@@ -6,12 +6,15 @@ A repo to make it so that you can easily fine tune MPT-7B using LoRA. This uses 
 
 ## Setup
 
-To use as a library in another project/directory simply:
+Ensure you are using either Linux or WSL for Windows. Mac might work as well but I don't have one to test it, but Bitsandbytes won't definitely won't run for Windows.
+
+
+To use as a library in another project/directory simply clone the repo, navigate to the folder and run:
 ```
 pip install -e ./
 ```
 
-or if you want to build a project within this directly just do a git clone and modify the files in the src folder. 
+or if you want to build a project within this directly just do a git clone and run and (if needed) modify the files in the src folder. 
 
 
 ## Fine Tuning
@@ -40,10 +43,13 @@ python src/finetune.py \
     --lora_target_modules '[Wqkv]' \
     --train_on_inputs \
     --group_by_length
-    --use_gradient_checkpointing True
+    --use_gradient_checkpointing True \ 
+    --load_in_8bit True
 ```
 
 To speed up training at the expense of GPU memory run with --use_gradient_checkpointing False.
+
+load_in_8bit defaults to True so to disable it just run the command with load_in_8bit set to False. 
 
 ## Inference
 
