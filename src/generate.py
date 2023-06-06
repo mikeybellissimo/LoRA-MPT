@@ -48,12 +48,12 @@ def main(
             torch_dtype=torch.float16,
             device_map={'': 0},
         )
-        """ model = PeftModel.from_pretrained(
+        model = PeftModel.from_pretrained(
             model,
             lora_weights,
             torch_dtype=torch.float16,
             device_map={'': 0}
-        ) """
+        )
     elif device == "mps":
         model = MPTForCausalLM.from_pretrained(
             base_model,
