@@ -14,7 +14,6 @@ todo.txt
 .venv
 .vscode
 .brev
-lora-mpt/
 test.py
 flagged/
 
