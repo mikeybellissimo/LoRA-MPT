@@ -395,7 +395,7 @@ def _flash_attn_backward(do, q, k, v, o, lse, dq, dk, dv, bias=None, causal=Fals
     bias_strides = (bias.stride(0), bias.stride(1), bias.stride(2)) if has_bias else (0, 0, 0)
     grid = lambda META: (triton.cdiv(seqlen_k, META['BLOCK_N']) if META['SEQUENCE_PARALLEL'] else 1, batch * nheads)
     _bwd_kernel[grid](q, k, v, bias, do, dq_accum, dk, dv, lse, delta, softmax_scale, q.stride(0), q.stride(2), q.stride(1), k.stride(0), k.stride(2), k.stride(1), v.stride(0), v.stride(2), v.stride(1), *bias_strides, do.stride(0), do.stride(2), do.stride(1), dq_accum.stride(0), dq_accum.stride(2), dq_accum.stride(1), dk.stride(0), dk.stride(2), dk.stride(1), dv.stride(0), dv.stride(2), dv.stride(1), nheads, seqlen_q, seqlen_k, seqlen_q_rounded, d, seqlen_q // 32, seqlen_k // 32, bias_type, causal, BLOCK_HEADDIM)
-    print("Gets through bwd Kernel")
+    
     dq.copy_(dq_accum)
 
 class FlashAttnQKVPackedFunc(torch.autograd.Function):
@@ -413,6 +413,7 @@ class FlashAttnQKVPackedFunc(torch.autograd.Function):
         (o, lse, ctx.softmax_scale) = _flash_attn_forward(qkv[:, :, 0], qkv[:, :, 1], qkv[:, :, 2], bias=bias, causal=causal, softmax_scale=softmax_scale)
         ctx.save_for_backward(qkv, o, lse, bias)
         ctx.causal = causal
+        
         return o
 
     @staticmethod
@@ -475,12 +476,10 @@ class FlashAttnFunc(torch.autograd.Function):
     def backward(ctx, do):
         (q, k, v, o, lse, bias) = ctx.saved_tensors
         assert not ctx.needs_input_grad[3], 'FlashAttention does not support bias gradient yet'
-        print("Starts backward")
         with torch.inference_mode():
             dq = torch.empty_like(q)
             dk = torch.empty_like(k)
             dv = torch.empty_like(v)
             _flash_attn_backward(do, q, k, v, o, lse, dq, dk, dv, bias=bias, causal=ctx.causal, softmax_scale=ctx.softmax_scale)
-        print("Ends Backwards")
         return (dq, dk, dv, None, None, None)
 flash_attn_func = FlashAttnFunc.apply

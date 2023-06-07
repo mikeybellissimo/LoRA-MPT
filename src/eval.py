@@ -2,7 +2,6 @@ import argparse
 import json
 import logging
 import os
-from modeling_mpt import MPTForCausalLM
 import torch
 
 
@@ -31,7 +30,7 @@ def parse_args():
     parser.add_argument("--check_integrity", action="store_true")
     parser.add_argument("--write_out", action="store_true", default=False)
     parser.add_argument("--output_base_path", type=str, default=None)
-
+    
     return parser.parse_args()
 
 

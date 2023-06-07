@@ -156,7 +156,7 @@ class MPTModel(MPTPreTrainedModel):
             attention_mask = attention_mask.bool()
         else:
             attention_mask = torch.ones(
-                (batch_size, seq_length_with_past), dtype=torch.bool, device=inputs_embeds.device
+                (batch_size, seq_length_with_past), dtype=torch.bool, device="cuda:0"
             )
 
         if inputs_embeds is None:

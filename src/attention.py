@@ -90,6 +90,7 @@ def triton_flash_attn_fn(query, key, value, n_heads, softmax_scale=None, attn_bi
     try:
         from flash_attn_triton import flash_attn_func
     except:
+        print("Did not work")
         _installed = False
         if version.parse(torch.__version__) < version.parse('2.0.0'):
             _installed = True

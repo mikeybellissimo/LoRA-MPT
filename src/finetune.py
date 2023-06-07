@@ -25,6 +25,7 @@ from peft import (
 
 from modeling_mpt import MPTForCausalLM
 from adapt_tokenizer import AutoTokenizerForMOD
+from configuration_mpt import MPTConfig
 
 from utils.prompter import Prompter
 
@@ -128,18 +129,15 @@ def train(
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
 
     
-    #config = transformers.AutoConfig.from_pretrained(
-    #    'mosaicml/mpt-7b-instruct',
-    #    trust_remote_code=True
-    #)
+    config = MPTConfig.from_pretrained(
+        './src/config.json',
+    )
     #config.attn_config['attn_impl'] = 'triton'
-
     model = MPTForCausalLM.from_pretrained(
         # 'mosaicml/mpt-7b',
         base_model,
-        #config=config,
+        config=config,
         trust_remote_code=True,
-        # base_model,
         load_in_8bit=load_in_8bit,
         torch_dtype=torch.float16,
         device_map=device_map,
