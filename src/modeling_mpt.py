@@ -152,18 +152,19 @@ class MPTModel(MPTPreTrainedModel):
             past_key_values_length = past_key_values[0][0].shape[2]
             seq_length_with_past = seq_length_with_past + past_key_values_length
 
-        if attention_mask is not None:
-            attention_mask = attention_mask.bool()
-        else:
-            attention_mask = torch.ones(
-                (batch_size, seq_length_with_past), dtype=torch.bool, device="cuda:0"
-            )
-
         if inputs_embeds is None:
             tok_emb = self.wte(input_ids)
         else:
             tok_emb = inputs_embeds
 
+        if attention_mask is not None:
+            attention_mask = attention_mask.bool()
+        else:
+            attention_mask = torch.ones(
+                ##I changed this from inputs_embeds.device because on lm-eval they are none. 
+                (batch_size, seq_length_with_past), dtype=torch.bool, device=tok_emb.device
+            )
+        
         if prefix_mask is not None:
             prefix_mask = prefix_mask.bool()
         if not return_dict:
@@ -196,6 +197,7 @@ class MPTModel(MPTPreTrainedModel):
                 pos = torch.clamp(pos - torch.cumsum((~attention_mask).to(torch.int32), dim=1)[:, past_position:], min=0)
             pos_emb = self.wpe(pos)
             x = tok_emb + pos_emb
+        
         if self.embedding_fraction == 1:
             x = self.emb_drop(x)
         else:
@@ -205,7 +207,7 @@ class MPTModel(MPTPreTrainedModel):
         (attn_bias, attention_mask) = self._attn_bias(device=x.device, dtype=x.dtype, attention_mask=attention_mask, prefix_mask=prefix_mask, sequence_id=sequence_id)
         if use_cache and past_key_values is None:
             past_key_values = [() for _ in range(self.config.n_layers)]
-
+        
         all_hidden_states = () if output_hidden_states else None
         for (b_idx, block) in enumerate(self.blocks):
             if output_hidden_states:
@@ -214,7 +216,7 @@ class MPTModel(MPTPreTrainedModel):
             past_key_value = past_key_values[b_idx] if past_key_values is not None else None
 
             if self.gradient_checkpointing and self.training:
-
+                
                 def create_custom_forward(module):
                     def custom_forward(*inputs):
                         # None for past_key_value
@@ -232,10 +234,10 @@ class MPTModel(MPTPreTrainedModel):
                 )
             else:
                 (x, past_key_value) = block(x, past_key_value=past_key_value, attn_bias=attn_bias, attention_mask=attention_mask, is_causal=self.is_causal)
-
             if past_key_values is not None:
                 past_key_values[b_idx] = past_key_value
         x = self.norm_f(x)
+        
         return BaseModelOutputWithPast(last_hidden_state=x, past_key_values=past_key_values, hidden_states=all_hidden_states)
 
     def param_init_fn(self, module):
@@ -254,6 +256,7 @@ class MPTForCausalLM(MPTPreTrainedModel):
         super().__init__(config)
         if not config.tie_word_embeddings:
             raise ValueError('MPTForCausalLM only supports tied word embeddings')
+        
         self.transformer = MPTModel(config)
         self.logit_scale = None
         if config.logit_scale is not None:
@@ -287,6 +290,8 @@ class MPTForCausalLM(MPTPreTrainedModel):
         return_dict = return_dict if return_dict is not None else self.config.return_dict
         use_cache = use_cache if use_cache is not None else self.config.use_cache
         outputs = self.transformer(input_ids=input_ids, past_key_values=past_key_values, attention_mask=attention_mask, prefix_mask=prefix_mask, sequence_id=sequence_id, return_dict=return_dict, output_attentions=output_attentions, output_hidden_states=output_hidden_states, use_cache=use_cache, inputs_embeds=inputs_embeds)
+        
+        
         logits = F.linear(outputs.last_hidden_state, self.transformer.wte.weight)
         if self.logit_scale is not None:
             if self.logit_scale == 0:

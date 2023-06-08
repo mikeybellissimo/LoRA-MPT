@@ -73,7 +73,7 @@ Then, git clone my fork of EleutherAI's Evaluation Harness at https://github.com
 Once that's done, switch back into MPT-Lora Directory and run:
 
 ```
-python src/eval.py --model mpt-causal --model_args pretrained=mosaicml/mpt-7b-instruct,trust_remote_code=True,load_in_8bit=True,peft=lora-mpt --tasks hellaswag
+python src/eval.py --model mpt-causal --model_args pretrained=mosaicml/mpt-7b-instruct,trust_remote_code=True,load_in_8bit=True,peft=lora-mpt --tasks hellaswag 
 ```
 
 To evaluate on the hellaswag task, for example, using the LoRA weights defined in lora-mpt. You can change the task to whatever one you'd like. 

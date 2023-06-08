@@ -19,6 +19,7 @@ def parse_args():
     parser.add_argument("--num_fewshot", type=int, default=0)
     parser.add_argument("--batch_size", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
+    parser.add_argument("--device_map_option", default={'':0})
     parser.add_argument("--output_path", default=None)
     parser.add_argument("--limit", type=float, default=None,
                         help="Limit the number of examples per task. "
@@ -64,6 +65,7 @@ def main():
         num_fewshot=args.num_fewshot,
         batch_size=args.batch_size,
         device=args.device,
+        device_map_option=args.device_map_option,
         no_cache=args.no_cache,
         limit=args.limit,
         description_dict=description_dict,
