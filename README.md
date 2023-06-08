@@ -61,7 +61,14 @@ python src/generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lor
 
 ## Evaluation
 
-To enable evaluation you must git clone my fork of EleutherAI's Evaluation Harness at https://github.com/mikeybellissimo/lm-evaluation-harness/tree/master#language-model-evaluation-harness and follow the instructions to download the library (Pretty much just clone it, cd into it and "pip install -e ."). 
+For the eval library to work there are a few extra steps.
+
+You need to install this repo from source so cd in this repo's directory on your computer and run:
+```
+pip install -e ./
+```
+
+Then, git clone my fork of EleutherAI's Evaluation Harness at https://github.com/mikeybellissimo/lm-evaluation-harness/tree/master#language-model-evaluation-harness and follow the instructions to download the library (Pretty much just clone it, cd into it and "pip install -e ."). 
 
 Once that's done, switch back into MPT-Lora Directory and run:
 
@@ -69,7 +76,7 @@ Once that's done, switch back into MPT-Lora Directory and run:
 python src/eval.py --model mpt-causal --model_args pretrained=mosaicml/mpt-7b-instruct,trust_remote_code=True,load_in_8bit=True,peft=lora-mpt --tasks hellaswag
 ```
 
-To evaluate on the hellaswag task, for example, using the LoRA weights defined in lora-mpt
+To evaluate on the hellaswag task, for example, using the LoRA weights defined in lora-mpt. You can change the task to whatever one you'd like. 
 
 ## MosaicML Platform
 
