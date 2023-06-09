@@ -18,7 +18,7 @@ or if you want to build a project within this directly just do a git clone and r
 
 ## Multi-Gpu Note
 
-For all of the following commands, substitute deepspeed for python to use with multi-gpu systems.
+For all of the following commands, substitute deepspeed for python to use with multi-gpu systems. Make sure you have deepspeed installed for this (a simple "pip install deepspeed" will normally accomplish this.)
 
 ## Fine Tuning
 
