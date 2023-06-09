@@ -107,7 +107,6 @@ def train(
         base_model
     ), "Please specify a --base_model, e.g. --base_model='huggyllama/llama-7b'"
     gradient_accumulation_steps = batch_size // micro_batch_size
-
     prompter = Prompter(prompt_template_name)
 
     device_map = {"": 0}    #"auto" # {"": 0}
@@ -116,6 +115,7 @@ def train(
     if ddp:
         device_map = {"": int(os.environ.get("LOCAL_RANK") or 0)}
         gradient_accumulation_steps = gradient_accumulation_steps // world_size
+        
     print(f"device map: {device_map}")
     # Check if parameter passed or if set within environ
     use_wandb = len(wandb_project) > 0 or ( "WANDB_PROJECT" in os.environ and len(os.environ["WANDB_PROJECT"]) > 0 )
@@ -262,7 +262,7 @@ def train(
         model.is_parallelizable = True
         model.model_parallel = True
 
-
+    print(" GRAD STEPS BEFORE TRAINER : " + str(gradient_accumulation_steps))
 
     trainer = transformers.Trainer(
         model=model,

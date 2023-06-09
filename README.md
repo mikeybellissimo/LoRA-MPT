@@ -16,6 +16,9 @@ pip install -e ./
 
 or if you want to build a project within this directly just do a git clone and run and (if needed) modify the files in the src folder. 
 
+## Multi-Gpu Note
+
+For all of the following commands, substitute deepspeed for python to use with multi-gpu systems.
 
 ## Fine Tuning
 
