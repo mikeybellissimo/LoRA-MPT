@@ -1,14 +1,4002 @@
 [
     {
-        "instruction": "Answer the following expression: 7 + 4",
-        "output": "11"
+        "context": "7+8=",
+        "completion": "15"
     },
     {
-        "instruction": "What is 2 + 1",
-        "output": "3"
+        "context": "4+5=",
+        "completion": "9"
     },
     {
-        "instruction": "Simplify the following expression: 3 + 7",
-        "output": "10"
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "9+1=",
+        "completion": "10"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "9+7=",
+        "completion": "16"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "9+7=",
+        "completion": "16"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "7+4=",
+        "completion": "11"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "9+7=",
+        "completion": "16"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "9+4=",
+        "completion": "13"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "2+8=",
+        "completion": "10"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "7+4=",
+        "completion": "11"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "9+1=",
+        "completion": "10"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "7+4=",
+        "completion": "11"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "9+1=",
+        "completion": "10"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "5+8=",
+        "completion": "13"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "9+8=",
+        "completion": "17"
+    },
+    {
+        "context": "1+2=",
+        "completion": "3"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "4+9=",
+        "completion": "13"
+    },
+    {
+        "context": "4+3=",
+        "completion": "7"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "6+1=",
+        "completion": "7"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "7+3=",
+        "completion": "10"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "2+5=",
+        "completion": "7"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "4+1=",
+        "completion": "5"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "0+4=",
+        "completion": "4"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "4+4=",
+        "completion": "8"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "4+1=",
+        "completion": "5"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "4+5=",
+        "completion": "9"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "8+7=",
+        "completion": "15"
+    },
+    {
+        "context": "9+1=",
+        "completion": "10"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "7+4=",
+        "completion": "11"
+    },
+    {
+        "context": "7+9=",
+        "completion": "16"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "9+2=",
+        "completion": "11"
+    },
+    {
+        "context": "9+1=",
+        "completion": "10"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "1+0=",
+        "completion": "1"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "8+2=",
+        "completion": "10"
+    },
+    {
+        "context": "1+4=",
+        "completion": "5"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "6+4=",
+        "completion": "10"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "4+2=",
+        "completion": "6"
+    },
+    {
+        "context": "0+5=",
+        "completion": "5"
+    },
+    {
+        "context": "8+4=",
+        "completion": "12"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "6+3=",
+        "completion": "9"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "8+1=",
+        "completion": "9"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "6+5=",
+        "completion": "11"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "8+6=",
+        "completion": "14"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "4+7=",
+        "completion": "11"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "8+3=",
+        "completion": "11"
+    },
+    {
+        "context": "9+0=",
+        "completion": "9"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "7+1=",
+        "completion": "8"
+    },
+    {
+        "context": "3+4=",
+        "completion": "7"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "2+0=",
+        "completion": "2"
+    },
+    {
+        "context": "4+8=",
+        "completion": "12"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "6+2=",
+        "completion": "8"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "6+6=",
+        "completion": "12"
+    },
+    {
+        "context": "9+7=",
+        "completion": "16"
+    },
+    {
+        "context": "0+6=",
+        "completion": "6"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "5+4=",
+        "completion": "9"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "3+0=",
+        "completion": "3"
+    },
+    {
+        "context": "5+6=",
+        "completion": "11"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "3+7=",
+        "completion": "10"
+    },
+    {
+        "context": "3+2=",
+        "completion": "5"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "3+8=",
+        "completion": "11"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "7+8=",
+        "completion": "15"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "1+3=",
+        "completion": "4"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "2+9=",
+        "completion": "11"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "9+5=",
+        "completion": "14"
+    },
+    {
+        "context": "0+2=",
+        "completion": "2"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "2+3=",
+        "completion": "5"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "1+1=",
+        "completion": "2"
+    },
+    {
+        "context": "6+9=",
+        "completion": "15"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "3+5=",
+        "completion": "8"
+    },
+    {
+        "context": "0+3=",
+        "completion": "3"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "6+8=",
+        "completion": "14"
+    },
+    {
+        "context": "4+1=",
+        "completion": "5"
+    },
+    {
+        "context": "0+9=",
+        "completion": "9"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "0+1=",
+        "completion": "1"
+    },
+    {
+        "context": "5+5=",
+        "completion": "10"
+    },
+    {
+        "context": "7+2=",
+        "completion": "9"
+    },
+    {
+        "context": "5+9=",
+        "completion": "14"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "1+9=",
+        "completion": "10"
+    },
+    {
+        "context": "9+6=",
+        "completion": "15"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "6+0=",
+        "completion": "6"
+    },
+    {
+        "context": "7+6=",
+        "completion": "13"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "2+4=",
+        "completion": "6"
+    },
+    {
+        "context": "4+0=",
+        "completion": "4"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "6+7=",
+        "completion": "13"
+    },
+    {
+        "context": "2+1=",
+        "completion": "3"
+    },
+    {
+        "context": "2+6=",
+        "completion": "8"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "5+2=",
+        "completion": "7"
+    },
+    {
+        "context": "5+1=",
+        "completion": "6"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "9+9=",
+        "completion": "18"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "1+5=",
+        "completion": "6"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "2+2=",
+        "completion": "4"
+    },
+    {
+        "context": "2+7=",
+        "completion": "9"
+    },
+    {
+        "context": "8+8=",
+        "completion": "16"
+    },
+    {
+        "context": "3+9=",
+        "completion": "12"
+    },
+    {
+        "context": "4+6=",
+        "completion": "10"
+    },
+    {
+        "context": "5+7=",
+        "completion": "12"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "1+8=",
+        "completion": "9"
+    },
+    {
+        "context": "3+1=",
+        "completion": "4"
+    },
+    {
+        "context": "7+4=",
+        "completion": "11"
+    },
+    {
+        "context": "5+0=",
+        "completion": "5"
+    },
+    {
+        "context": "3+3=",
+        "completion": "6"
+    },
+    {
+        "context": "8+5=",
+        "completion": "13"
+    },
+    {
+        "context": "0+0=",
+        "completion": "0"
+    },
+    {
+        "context": "7+7=",
+        "completion": "14"
+    },
+    {
+        "context": "3+6=",
+        "completion": "9"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "9+3=",
+        "completion": "12"
+    },
+    {
+        "context": "0+7=",
+        "completion": "7"
+    },
+    {
+        "context": "7+0=",
+        "completion": "7"
+    },
+    {
+        "context": "7+5=",
+        "completion": "12"
+    },
+    {
+        "context": "1+7=",
+        "completion": "8"
+    },
+    {
+        "context": "8+9=",
+        "completion": "17"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "8+0=",
+        "completion": "8"
+    },
+    {
+        "context": "1+6=",
+        "completion": "7"
+    },
+    {
+        "context": "0+8=",
+        "completion": "8"
+    },
+    {
+        "context": "5+3=",
+        "completion": "8"
     }
 ]

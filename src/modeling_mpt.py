@@ -310,7 +310,7 @@ class MPTForCausalLM(MPTPreTrainedModel):
 
     def fsdp_wrap_fn(self, module):
         return isinstance(module, MPTBlock)
-
+    
     def activation_checkpointing_fn(self, module):
         return isinstance(module, MPTBlock)
 

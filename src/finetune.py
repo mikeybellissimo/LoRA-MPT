@@ -50,6 +50,7 @@ def train(
     base_model: str = "",  # the only required argument
     data_path: str = "yahma/alpaca-cleaned",
     output_dir: str = "./lora-alpaca",
+    needs_prompt_generation : bool = None,
     # training hyperparams
     batch_size: int = 128,
     micro_batch_size: int = 4,
@@ -66,7 +67,7 @@ def train(
     lora_target_modules: List[str] = ["query_key_value", "xxx"],
     
     # llm hyperparams
-    train_on_inputs: bool = True,  # if False, masks out inputs in loss
+    train_on_inputs: bool = False,  # if False, masks out inputs in loss
     add_eos_token: bool = False,
     group_by_length: bool = False,  # faster, but produces an odd training loss curve
     # wandb params
@@ -77,6 +78,7 @@ def train(
     resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
     prompt_template_name: str = "alpaca",  # The prompt template to use, will default to alpaca.
 ):
+    
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
             f"Training {base_model} model with params:\n"
@@ -176,28 +178,63 @@ def train(
         return result
 
     def generate_and_tokenize_prompt(data_point):
-        full_prompt = prompter.generate_prompt(
-            data_point["instruction"],
-            data_point["input"],
-            data_point["output"],
-        )
-        tokenized_full_prompt = tokenize(full_prompt)
-        if not train_on_inputs:
-            user_prompt = prompter.generate_prompt(
-                data_point["instruction"], data_point["input"]
-            )
-            tokenized_user_prompt = tokenize(
-                user_prompt, add_eos_token=add_eos_token
-            )
-            user_prompt_len = len(tokenized_user_prompt["input_ids"])
-            if add_eos_token:
-                user_prompt_len -= 1
+        uses_prompt_generation = needs_prompt_generation
+        if(data_path == "yahma/alpaca-cleaned"):
+            uses_prompt_generation = True
+        if(data_path == "mosaicml/dolly_hhrlhf"):
+            uses_prompt_generation = False
+        if(uses_prompt_generation == None):
+            raise ValueError("You must specify 'needs_prompt_generation' argument or add your dataset to the automatically detected examples in the code immediately above where this error is thrown. In a dataset like alpaca-cleaned this is True because it requires the prompter to generate the full prompt whereas it would be False for mosiacml/dolly-hhrlhf because the full prompt is built into the dataset. Run the finetune command and specify 'needs_prompt_generation'")
+        
+        #If its in the format that MPT uses then you don't need to do the whole prompt generation thing, just concatenate and tokenize
+        if(uses_prompt_generation == False):
+            #First, make it so that it's one big concatenated string with the prompt followed by the response.
+            full_prompt = f"{data_point['prompt']}{data_point['response']}"
+            
+            #Then tokenize.
+            tokenized_full_prompt= tokenize(full_prompt)
+        
+            
+            #If train_on_inputs is False then set them all equal to -100 (or 0 if tuning determines that to be superior)
+            if not train_on_inputs:
+                user_prompt = data_point['prompt']
+                tokenized_user_prompt = tokenize(
+                    user_prompt, add_eos_token=add_eos_token
+                )
+                user_prompt_len = len(tokenized_user_prompt["input_ids"])
+                
+                if add_eos_token:
+                    user_prompt_len -= 1
+                
+                tokenized_full_prompt["labels"] = [-100] * user_prompt_len + tokenized_full_prompt["labels"][ user_prompt_len:]  # could be sped up, probably
 
-            tokenized_full_prompt["labels"] = [
-                -100
-            ] * user_prompt_len + tokenized_full_prompt["labels"][
-                user_prompt_len:
-            ]  # could be sped up, probably
+        #Otherwise, if it's in the format that Alpaca uses, you have to generate the prompt beforehand. If it was a larger dataset I would recommend instead just preprocessing and saving it in MPT's dataset's format.
+        else:
+            full_prompt = prompter.generate_prompt(
+                data_point["instruction"],
+                data_point["input"],
+                data_point["output"],
+            )
+            
+            tokenized_full_prompt = tokenize(full_prompt)
+            
+            if not train_on_inputs:
+                user_prompt = prompter.generate_prompt(
+                    data_point["instruction"], data_point["input"]
+                )
+                tokenized_user_prompt = tokenize(
+                    user_prompt, add_eos_token=add_eos_token
+                )
+                user_prompt_len = len(tokenized_user_prompt["input_ids"])
+                
+                if add_eos_token:
+                    user_prompt_len -= 1
+
+                tokenized_full_prompt["labels"] = [
+                    -100
+                ] * user_prompt_len + tokenized_full_prompt["labels"][
+                    user_prompt_len:
+                ]  # could be sped up, probably
         return tokenized_full_prompt
 
     
@@ -218,7 +255,7 @@ def train(
     else:
         data = load_dataset(data_path)
     
-
+    
 
     if resume_from_checkpoint:
         # Check the available weights and load them
@@ -261,8 +298,6 @@ def train(
         # keeps Trainer from trying its own DataParallelism when more than 1 gpu is available
         model.is_parallelizable = True
         model.model_parallel = True
-
-    print(" GRAD STEPS BEFORE TRAINER : " + str(gradient_accumulation_steps))
 
     trainer = transformers.Trainer(
         model=model,

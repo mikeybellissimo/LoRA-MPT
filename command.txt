@@ -7,4 +7,5 @@ python src/finetune.py --base_model 'mosaicml/mpt-7b-instruct' --data_path 'yahm
 python src/generate.py --load_8bit --base_model 'mosaicml/mpt-7b-instruct' --lora_weights 'lora-mpt'
 
 #Evaluation
-python src/eval.py --model mpt-causal --model_args pretrained=mosaicml/mpt-7b-instruct,trust_remote_code=True,load_in_8bit=True,peft=lora-mpt --tasks hellaswag --device_map_option=sequential
+python src/eval.py --model mpt-causal --model_args pretrained=mosaicml/mpt-7b,trust_remote_code=True,load_in_8bit=True,peft=lora-mpt --tasks arithmetic_2da
+
